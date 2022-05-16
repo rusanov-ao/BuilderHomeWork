@@ -74,4 +74,24 @@ public class Person {
     public int hashCode() {
         return Objects.hash(name, surname, age, address);
     }
+
+    public boolean hasAge() {
+        boolean result;
+        if (age > 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
+
+    public boolean hasAddress() {
+        boolean result;
+        if (address != null) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
 }
