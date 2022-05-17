@@ -31,7 +31,7 @@ public class PersonBuilder {
     }
 
     public Person build() {
-        return new Person(name, surname);
+        return new Person(name, surname, age, address);
     }
 
 

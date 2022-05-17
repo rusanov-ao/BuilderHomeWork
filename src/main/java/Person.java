@@ -7,19 +7,6 @@ public class Person {
     protected  int age;
     protected  String address;
 
-    public Person(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-        age = 0;
-        address = null;
-    }
-
-    public Person(String name, String surnamem, int age) {
-        this.name = name;
-        this.surname = surnamem;
-        this.age = age;
-        address = null;
-    }
 
     public Person(String name, String surnamem, int age, String address) {
         this.name = name;
@@ -62,14 +49,6 @@ public class Person {
                 '}';
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Person)) return false;
-//        Person person = (Person) o;
-//        return age == person.age && name.equals(person.name) && surname.equals(person.surname) && address.equals(person.address);
-//    }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, age, address);
@@ -93,5 +72,15 @@ public class Person {
             result = false;
         }
         return result;
+    }
+
+    public PersonBuilder newChildBuilder() {
+//        Person parant = new PersonBuilder()
+//                .setSurname(surname)
+//                .setAddress(address)
+//                .build();
+
+        return new PersonBuilder();
+
     }
 }
