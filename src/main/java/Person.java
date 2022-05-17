@@ -75,12 +75,7 @@ public class Person {
     }
 
     public PersonBuilder newChildBuilder() {
-//        Person parant = new PersonBuilder()
-//                .setSurname(surname)
-//                .setAddress(address)
-//                .build();
-
-        return new PersonBuilder();
+        return new PersonBuilder().setSurname(surname).setAddress(address);
 
     }
 }

@@ -10,7 +10,8 @@ public class Main {
 
         Person son = mom.newChildBuilder()
                         .setName("Антошка")
-                                .build();
+                        .setAge(10)
+                        .build();
 
         System.out.println("У " + mom + " есть сын, " + son);
     }
