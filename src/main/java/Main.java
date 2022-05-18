@@ -14,5 +14,12 @@ public class Main {
                         .build();
 
         System.out.println("У " + mom + " есть сын, " + son);
+
+        Person dad = new PersonBuilder()
+                //.setName("Шерлок") // Для
+                .setSurname("Холмс")
+                .setAge(150)
+                .setAddress("Лондон")
+                .build();
     }
 }

@@ -31,10 +31,13 @@ public class PersonBuilder {
     }
 
     public Person build() {
-        return new Person(name, surname, age, address);
+        if (age < 1) {
+            throw  new IllegalArgumentException("\nВозраст недопустимый!");
+        } else if (name == null || surname == null) {
+            throw  new IllegalStateException("\nНе хватает обязательных полей!");
+        } else {
+            return new Person(name, surname, age, address);
+        }
     }
-
-
-
 
 }
